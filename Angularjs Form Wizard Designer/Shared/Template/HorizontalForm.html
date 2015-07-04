@@ -1,0 +1,35 @@
+﻿
+<div class="ibox float-e-margins">
+    <div class="ibox-title">
+        <h5>{{form.heading}}</h5>
+        <div class="ibox-tools">
+
+            <a class="close-link">
+                <i class="fa fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="ibox-content">
+        <div class="form-horizontal container">
+            <div class="{{form.layout}} form-group" ng-repeat="option in form.fields">
+	           
+                <label 
+                    ng-if="option.label != null" 
+                    class="{{form.classlabel}} control-label">
+                    {{option.label}}<span ng-if="option.valid" class="red "> *</span>
+                    
+                    
+                </label>
+
+                <div class="input-group {{option.cls}} {{form.clscomp}}" >
+                    <span class="input-group-addon" ng-if="option.type == 'calendar'" ><i class="fa fa-calendar"></i></span>
+                     <app-input ng-click="option.click"  option="option"></app-input>
+                    <span class="help-block m--none">{{option.hint}}</span>
+                </div>
+            </div>
+      
+	
+
+        </div>
+    </div>
+</div>

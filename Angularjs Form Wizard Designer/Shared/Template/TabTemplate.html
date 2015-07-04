@@ -1,0 +1,29 @@
+﻿<div class="{{attr.space}}">
+                    <div class="panel blank-panel">
+
+                        <div class="panel-heading">
+                            <div class="panel-title m-b-md"><h4>{{attr.title}}</h4></div>
+                            <div class="panel-options">
+
+                                <ul class="nav nav-tabs" >
+                                    <li ng-repeat="item in attr.list" class="{{item.cls}}"><a data-toggle="tab" href="#tab-{{$index}}" aria-expanded="{{item.expanded}}">{{item.title}}</a></li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="panel-body">
+
+                            <div class="tab-content">
+                                <div id="tab-{{$index}}" class="tab-pane " ng-class="($index == 0) ? 'active' : ''" jform 
+                                     ng-repeat="option in attr.jform" 
+                                     form="option" 
+                                     template="{{option.template}}" 
+                                     class="{{option.space}}" >
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>

@@ -1,0 +1,27 @@
+﻿<div class="row wrapper border-bottom white-bg page-heading">
+<div class="col-lg-10">
+    <h2>Local App</h2>
+    <ol class="breadcrumb">
+        <li>
+            <a href="index.html">Home</a>
+        </li>
+        <li>
+            <a href="index.html">{{City}}</a>
+        </li>
+        <li ng-hide="Action=='Add'" class="active">
+            <strong>{{Category}}</strong>
+        </li>
+
+        <li ng-show="Action=='Add'">
+            <a href="index.html?city={{City}}&category={{Category}}">{{Category}}</a>
+        </li>
+        <li ng-show="Action=='Add'" class="active">
+
+            <strong>Add New</strong>
+        </li>
+    </ol>
+</div>
+<div class="col-lg-2">
+
+</div>
+</div>

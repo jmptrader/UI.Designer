@@ -1,0 +1,25 @@
+﻿
+<div class="wrapper wrapper-content animated fadeInRight" >
+    <div class="row">
+        <div jmultiform
+             template="{{parent.template}}" 
+             attr="parent.attr">
+                   
+        </div>
+
+        <form action="http://kent.nasz.us/mumbra/php/postentry.php"  method="post" enctype="multipart/form-data">
+            <input type="hidden" value="{{City}}|{{Category}}" name="categoy" />
+            <input type="hidden" value="{{Mobile}}" name="mobile" />
+            <input type="hidden" value="{{Edit}}" name="edit" />
+            <input type="hidden" value="{{id}}" name="id_web" />
+            <div jform
+                ng-repeat="option in jform" 
+                form="option" 
+                template="{{option.template}}" 
+                class="{{option.space}}" >
+        </div>
+            <input type="submit" class="btn btn-success" value="Save" />
+            </form>
+    </div>
+</div>
+

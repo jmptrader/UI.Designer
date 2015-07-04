@@ -1,0 +1,22 @@
+﻿    <div class="col-lg-4" ng-repeat="item in form.fields">
+    <div class="contact-box" >
+        <a href="profile.html">
+        <div class="col-sm-4">
+            <div class="text-center">
+               
+                
+                <img alt="image" class="img-circle m-t-xs img-responsive" src="./Assests/img/{{item.src}}.jpg">
+                <div class="m-t-xs font-bold">{{item.designation}}</div>
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <h3><strong>John Smith</strong></h3>
+            <p><i class="fa fa-map-marker"></i> {{item.location}}</p>
+            <address>
+                <strong>{{item.company}}</strong><br>{{item.address}}<br/><abbr title="Phone">P:</abbr> {{item.phone}}
+            </address>
+        </div>
+        <div class="clearfix"></div>
+            </a>
+    </div>
+</div>

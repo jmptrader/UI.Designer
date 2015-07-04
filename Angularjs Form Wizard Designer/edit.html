@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WellsFargo | Dashboard</title>
+
+    <link  href="./Assests/css/bootstrap.min.css" rel="stylesheet">
+    <link  href="./Assests/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Gritter -->
+    <link  href="./Assests/js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+     <link href="./Assests/css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+    <link  href="./Assests/css/animate.css" rel="stylesheet">
+    <link  href="./Assests/css/style.css" rel="stylesheet">
+     <link href="./Assests/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+
+    <link  href="./Assests/css/plugins/iCheck/custom.css" rel="stylesheet">
+
+</head>
+
+    <body ng-app="app" data-ng-controller="BaseController" >
+
+         <div id="wrapper">
+        <div ng-if="View!='mobile'" ng-include src="'./Shared/SideBar/SideBar.html'"></div>
+        <div id="page-wrapper" class="gray-bg dashbard-1 ">
+            <ng-include ng-if="View!='mobile'" src="'./Shared/NavigationBar/NavigationBar.html'"></ng-include>
+            <ng-include ng-if="View!='mobile'" src="'./Shared/BreadCrumbBar/BreadCrumbBar.html'"></ng-include>
+            <div ng-include src="'./Shared/ContentBar/ContentBar.html'"></div>
+            <div ng-include src="'./Shared/FooterBar/FooterBar.html'"></div>
+            
+            
+        </div>
+
+        </div>
+    </div>
+   
+    
+    <script src="./Assests/js/jquery-2.1.1.js"></script>
+    <script src="./Assests/js/bootstrap.min.js"></script>
+    <script src="./Assests/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+   
+   
+    <!-- Custom and plugin javascript -->
+     <script src="./Assests/js/plugins/iCheck/icheck.min.js"></script>
+    <script src="./Assests/js/boot.js"></script>
+     <script src="./Assests/js/plugins/toastr/toastr.min.js"></script>
+
+   
+    <!-- Data picker -->
+   <script src="./Assests/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+
+    <!-- GITTER -->
+    <script src="./Assests/js/plugins/gritter/jquery.gritter.min.js"></script>
+
+    <!-- ANGULARJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
+    <!-- Mainly scripts -->
+    <script src="./Scripts/StaticData/StaticData.js"></script>
+    <script src="./Scripts/Framework/FrameWorkService.js"></script>
+    <script src="./app.js"></script>
+    <script src="./Components/Application/jFields.js"></script>
+    <script src="./Scripts/Framework/AppDirectvies.js"></script>
+    <script src="Scripts/Framework/Validation.js"></script>
+    <script src="./Components/Application/Controller.js"></script>
+
+
+    
+
+</body>
+</html>

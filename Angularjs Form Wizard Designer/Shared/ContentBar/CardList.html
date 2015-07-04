@@ -1,0 +1,44 @@
+﻿<div class="col-lg-4" ng-repeat="item in webdata">
+    <div class="contact-box">
+        <a href="details.html?id={{item.id}}">
+            <div class="col-sm-4">
+                <div class="text-center">
+                    <img alt="image" class="img-circle m-t-xs img-responsive" src="http://kent.nasz.us/app_php/shifaappsettings/mumbra/{{item.logo}}.jpg">
+                    <div class="m-t-xs font-bold">{{item.Name}}</div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <h3><strong>{{item.Name}}</strong></h3>
+                <p><i class="fa fa-map-marker"></i> Rating: 4/5</p>
+                <address>
+                    <strong>{{item.Name}}</strong><br>
+                    {{item.data.Address | limitTo: 80}}<br/>
+                    <abbr title="Phone">P:</abbr> {{item.data.Phone}}
+                </address>
+            </div>
+            <div class="clearfix"></div>
+        </a>
+    </div>
+
+
+</div>
+
+
+<div class="col-lg-4">
+    <div class="contact-box" >
+        <a href="edit.html?city={{City}}&category={{Category}}&action=Add">
+            <div class="col-sm-4">
+                <div class="text-center">
+
+
+                    <img alt="image" class="img-circle m-t-xs img-responsive" src="Assests/img/addnew.png">
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <h3><strong>Add New {{Category}}</strong></h3>
+                <p><i class="fa fa-map-marker"></i>{{City}}</p>
+            </div>
+            <div class="clearfix"></div>
+        </a>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+﻿
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul class="nav" id="side-menu">
+            <li class="nav-header">
+                <div class="dropdown profile-element"> <span>
+                                                           <img alt="image" class="img-circle" src="./Assests/img/profile_small.jpg" />
+                                                       </span>
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">Nasir Sayed</strong>
+                                             </span> <span class="text-muted text-xs block">Dot.net Developer <b class="caret"></b></span> </span> </a>
+                    <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="contacts.html">Contacts</a></li>
+                        <li><a href="mailbox.html">Mailbox</a></li>
+                        <li class="divider"></li>
+                        <li><a href="login.html">Logout</a></li>
+                    </ul>
+                </div>
+                <div class="logo-element">
+                    IN+
+                </div>
+            </li>
+            <li class="active">
+                <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Mumbra</span> <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li ng-repeat="opt in SideBarMumbraJson" ng-class="{'active':(Category == opt.Name)}">
+                        <a ng-if="Page == 'Template'" ng-click="openTemplate('Mumbra',opt.Name)">{{opt.Name}}</a>
+                        <a ng-if="Page == 'Details'" href="Index.html?city=Mumbra&category={{opt.Name}}">{{opt.Name}}</a>
+                        <a ng-if="Page == 'Index' || Page == 'Edit'" href="?city=Mumbra&category={{opt.Name}}">{{opt.Name}}</a>
+                        <a ng-if="Page == 'EditTemplate'" href="jtemplate.html?city=Mumbra&category={{opt.Name}}">{{opt.Name}}</a>
+                        <a ng-if="Page == 'EditForm'" href="?city=Mumbra&category={{opt.Name}}">{{opt.Name}}</a>
+                        <a ng-if="Page == 'Add'" href="?city=Mumbra&category={{opt.Name}}&action=Add">{{opt.Name}}</a>
+                    </li>
+
+                </ul>
+            </li>
+           
+           
+        </ul>
+
+    </div>
+</nav>
+<script>
+    $('#side-menu').metisMenu();
+
+</script>
